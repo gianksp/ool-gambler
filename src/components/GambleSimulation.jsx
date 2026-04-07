@@ -74,17 +74,19 @@ function formatExpectedCount(value) {
   return `${mantissa.toFixed(2)} × 10^${exponent}`;
 }
 
-const DEFAULT_STEPS = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
+const DEFAULT_STEPS = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
 
 const DEFAULT_STEP_NAMES = [
-  "origin of DNA coding",
-  "formation of proteins",
-  "origin of system of heredity",
-  "origin of metabolic cycles",
-  "origin of RNA polymerase",
-  "RNA captured by vesicles",
-  "formation of stable vesicles",
-  "formation of RNA strings",
+  "Amino acids form from inorganic chemistry",
+  "Nucleotides assemble from simpler molecules",
+  "Monomers concentrate in a local environment",
+  "Monomers polymerize into chains without enzymes",
+  "A molecule emerges that copies itself",
+  "Copies vary and those differences are inherited",
+  "A membrane forms that encloses the chemistry",
+  "Replication and membrane division become coupled",
+  "A code linking nucleotides to amino acids emerges",
+  "Machinery that reads the code and builds proteins appears",
 ];
 
 function SectionCard({ className = "", children }) {
@@ -516,7 +518,7 @@ function DesktopMatrixViewer({ numEnvs, probs, result, runKey, stepNames }) {
           <div className="min-w-max p-3 sm:p-4">
             <div
               className="grid items-center gap-2"
-              style={{ gridTemplateColumns: `minmax(132px, 160px) repeat(${numEnvs}, 44px) minmax(120px, 1fr)` }}
+              style={{ gridTemplateColumns: `minmax(220px, 250px) repeat(${numEnvs}, 44px) minmax(120px, 1fr)` }}
             >
               <div />
               {Array.from({ length: numEnvs }, (_, c) => (
